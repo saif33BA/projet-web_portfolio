@@ -1,0 +1,310 @@
+/*-----> BROWSER RESET <------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*-----> ROOT <------*/
+:root {
+  --primary-clr: #121212;
+  --secodary-clr: #e63462;
+  --tertiary-clr: #dbfcff;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+  --primary-fz: 15px;
+  --fw-xs: 100;
+  --fw-md: 300;
+  --fw-lg: 700;
+  --fw-xl: 800;
+}
+
+/*-----> Body <------*/
+
+body {
+  font-family: var(--primary-font);
+  font-size: var(--primary-fz);
+  background-color: var(--primary-clr);
+  color: var(--tertiary-clr);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  padding: 0 2rem;
+}
+
+/*-----> NAVIGATION <------*/
+
+.nav ul {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.list-element {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-element a {
+  font-family: var(--secondary-font);
+  font-weight: var(--fw-lg);
+  text-decoration: none;
+  color: #e63462;
+}
+
+.header-content {
+  padding-top: 2rem;
+}
+
+.header-button {
+  background-color: #1b2f31;
+  color: #1cc49d;
+  font-weight: var(--fw-md);
+  border-radius: 2rem;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+
+.header-button:hover {
+  cursor: pointer;
+  background-color: #1cc49d;
+  color: #1b2f31;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.about-paragraph {
+  width: 50%;
+}
+
+.about-paragraph > p {
+  font-size: 1rem;
+  width: 70ch;
+  margin-top: 0.75rem;
+}
+
+.about-img > img {
+  max-height: 35rem;
+}
+.about-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+  min-height: 80vh;
+  display: grid;
+  place-content: center;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.callout {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.callout h2 {
+  font-size: 2rem;
+  color: #1cc49d;
+  font-weight: var(--fw-lg);
+  margin-bottom: 1rem;
+}
+.callout p {
+  font-size: 1rem;
+  font-weight: var(--fw-md);
+  color: var(--tertiary-clr);
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  min-height: 5rem;
+}
+
+.social > a img {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.social:hover {
+  cursor: pointer;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.footer {
+  display: flex;
+
+  gap: 2rem;
+  list-style: none;
+  max-height: 5rem;
+}
+
+.footer img {
+  width: 5rem;
+}
+
+.question-container {
+  margin-top: 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.question-container {
+  border: 2px solid var(--secodary-clr);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.hobbies {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hobby {
+  width: 30%;
+  height: 35rem;
+}
+
+.hobby img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.hobby h2 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-md);
+  color: var(--secodary-clr);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hobby-title {
+  font-size: 3rem;
+  font-weight: var(--fw-xl);
+  margin: 0.25rem 0.25rem;
+  text-align: center;
+}
+
+.back {
+  position: sticky;
+  top: 2rem;
+  left: 2rem;
+  padding: 2rem;
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  background-color: var(--secodary-clr);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: var(--fw-md);
+  color: #121212;
+}
